@@ -38,6 +38,10 @@
   opacity: 1;
 }
 
+.topbar__link {
+  color: var(--light);
+}
+
 /*** Button ***/
 .btn {
   font-weight: 500;
