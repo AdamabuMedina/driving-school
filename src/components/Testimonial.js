@@ -1,15 +1,16 @@
-import OwlCarousel from "react-owl-carousel";
+import Slider from "react-slick";
 import testimonial1 from "../img/testimonial-1.jpg";
 import testimonial2 from "../img/testimonial-2.jpg";
 import testimonial3 from "../img/testimonial-3.jpg";
 
 const Testimonial = () => {
-  const options = {
-    autoplay: true,
-    smartSpeed: 1000,
-    items: 1,
+  const settings = {
+    autoplay: false,
+    speed: 1000,
     dots: true,
-    loop: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
   };
 
   return (
@@ -25,10 +26,7 @@ const Testimonial = () => {
         </div>
         <div className="row justify-content-center">
           <div className="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
-            <OwlCarousel
-              className="owl-theme testimonial-carousel"
-              {...options}
-            >
+            <Slider {...settings}>
               <div className="testimonial-item text-center">
                 <div className="position-relative mb-5">
                   <img
@@ -86,7 +84,7 @@ const Testimonial = () => {
                 <h5>Имя клиента 3</h5>
                 <span>Профессия</span>
               </div>
-            </OwlCarousel>
+            </Slider>
           </div>
         </div>
       </div>

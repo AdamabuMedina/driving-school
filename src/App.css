@@ -72,8 +72,8 @@
 .btn-sm-square,
 .btn-lg-square {
   padding: 0;
-  display: flex;
-  align-items: center;
+  display: flex !important;
+  align-items: center !important;
   justify-content: center;
   font-weight: normal;
 }
@@ -280,8 +280,10 @@
   opacity: 1;
 }
 
-/*** Testimonial ***/
-.testimonial-carousel .owl-dots {
+/*** Testimonial (для react-slick) ***/
+
+/* Стиль для контейнера с навигационными точками (dots) */
+.slick-dots {
   height: 40px;
   margin-top: 25px;
   display: flex;
@@ -289,7 +291,8 @@
   justify-content: center;
 }
 
-.testimonial-carousel .owl-dot {
+/* Стиль для отдельных точек */
+.slick-dots li {
   position: relative;
   display: inline-block;
   margin: 0 5px;
@@ -300,15 +303,30 @@
   transition: 0.5s;
 }
 
-.testimonial-carousel .owl-dot.active {
+/* Стиль для активной точки */
+.slick-dots li.slick-active {
   width: 40px;
   height: 40px;
   background: var(--primary);
 }
 
-.testimonial-carousel .owl-item img {
+/* Стиль для изображений внутри слайдера */
+.slick-slide img {
   width: 150px;
   height: 150px;
+}
+
+.slick-track {
+  margin-bottom: 35px;
+}
+
+.slick-dots {
+  display: flex !important;
+}
+
+.slick-dots li button:before {
+  font-size: 0px;
+  opacity: 0;
 }
 
 /*** Footer ***/
