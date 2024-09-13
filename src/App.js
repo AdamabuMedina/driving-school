@@ -6,6 +6,11 @@ import Topbar from "./components/Topbar";
 import Carousel from "./components/Carousel";
 import WOW from "wow.js";
 import Facts from "./components/Facts";
+import About from "./components/About";
+import Courses from "./components/Courses";
+import Features from "./components/Features";
+import Team from "./components/Team";
+import Testimonial from "./components/Testimonial";
 
 function App() {
   useEffect(() => {
@@ -19,6 +24,11 @@ function App() {
       <Navbar />
       <Carousel />
       <Facts />
+      <About />
+      <Courses />
+      <Features />
+      <Team />
+      <Testimonial />
     </div>
   );
 }
