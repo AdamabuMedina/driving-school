@@ -1,6 +1,30 @@
+import React, { useState, useEffect } from "react";
+
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 300) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+    <nav
+      className={`navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 ${
+        isScrolled ? "shadow-sm" : ""
+      }`}
+      style={{ top: isScrolled ? "0px" : "-100px" }}
+    >
       <a
         href="index.html"
         className="navbar-brand d-flex align-items-center border-end px-4 px-lg-5"
