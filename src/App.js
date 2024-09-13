@@ -1,4 +1,5 @@
 import "./app.css";
+import Navbar from "./components/Navbar";
 import Spinner from "./components/Spinner";
 import Topbar from "./components/Topbar";
 
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <Spinner />
       <Topbar />
+      <Navbar />
     </div>
   );
 }
