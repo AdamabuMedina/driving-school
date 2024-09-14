@@ -1,7 +1,4 @@
-import about1 from "../img/about-1.jpg";
-import about2 from "../img/about-2.jpg";
-
-const About = () => {
+const About = ({ about1, about2 }) => {
   return (
     <div className="container-xxl py-6">
       <div className="container">

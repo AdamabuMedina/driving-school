@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom"; // Импорт useLocation
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation(); // Получение текущего маршрута
 
   const handleScroll = () => {
     if (window.scrollY > 300) {
@@ -25,14 +27,14 @@ const Navbar = () => {
       }`}
       style={{ top: isScrolled ? "0px" : "-100px" }}
     >
-      <a
-        href="index.html"
+      <Link
+        to="/"
         className="navbar-brand d-flex align-items-center border-end px-4 px-lg-5"
       >
         <h2 className="m-0">
           <i className="fa fa-car text-primary me-2"></i>Бумер
         </h2>
-      </a>
+      </Link>
       <button
         type="button"
         className="navbar-toggler me-4"
@@ -43,49 +45,97 @@ const Navbar = () => {
       </button>
       <div className="collapse navbar-collapse" id="navbarCollapse">
         <div className="navbar-nav ms-auto p-4 p-lg-0">
-          <a href="index.html" className="nav-item nav-link active">
+          <Link
+            to="/"
+            className={`nav-item nav-link ${
+              location.pathname === "/" ? "active" : ""
+            }`}
+          >
             Главная
-          </a>
-          <a href="about.html" className="nav-item nav-link">
+          </Link>
+          <Link
+            to="/about"
+            className={`nav-item nav-link ${
+              location.pathname === "/about" ? "active" : ""
+            }`}
+          >
             О нас
-          </a>
-          <a href="courses.html" className="nav-item nav-link">
-            Категории и цены
-          </a>
+          </Link>
+          <Link
+            to="/courses"
+            className={`nav-item nav-link ${
+              location.pathname === "/courses" ? "active" : ""
+            }`}
+          >
+            Популярные курсы
+          </Link>
           <div className="nav-item dropdown">
-            <a
-              href="/"
+            <Link
+              to="#"
               className="nav-link dropdown-toggle"
               data-bs-toggle="dropdown"
             >
               Страницы
-            </a>
+            </Link>
             <div className="dropdown-menu bg-light m-0">
-              <a href="feature.html" className="dropdown-item">
+              <Link
+                to="/feature"
+                className={`dropdown-item ${
+                  location.pathname === "/feature" ? "active" : ""
+                }`}
+              >
                 Подробнее
-              </a>
-              <a href="appointment.html" className="dropdown-item">
+              </Link>
+              <Link
+                to="/appointment"
+                className={`dropdown-item ${
+                  location.pathname === "/appointment" ? "active" : ""
+                }`}
+              >
                 Рассрочка
-              </a>
-              <a href="team.html" className="dropdown-item">
+              </Link>
+              <Link
+                to="/team"
+                className={`dropdown-item ${
+                  location.pathname === "/team" ? "active" : ""
+                }`}
+              >
                 Наши инструктора
-              </a>
-              <a href="testimonial.html" className="dropdown-item">
+              </Link>
+              <Link
+                to="/testimonial"
+                className={`dropdown-item ${
+                  location.pathname === "/testimonial" ? "active" : ""
+                }`}
+              >
                 Отзывы
-              </a>
-              <a href="404.html" className="dropdown-item">
+              </Link>
+              <Link
+                to="/404"
+                className={`dropdown-item ${
+                  location.pathname === "/404" ? "active" : ""
+                }`}
+              >
                 Страница ошибки
-              </a>
+              </Link>
             </div>
           </div>
-          <a href="contact.html" className="nav-item nav-link">
+          <Link
+            to="/contact"
+            className={`nav-item nav-link ${
+              location.pathname === "/contact" ? "active" : ""
+            }`}
+          >
             Контакты
-          </a>
+          </Link>
         </div>
-        <a href="/" className="btn btn-primary py-4 px-lg-5 d-none d-lg-block">
-          Get Started
+        <Link
+          to="/contact"
+          className="btn btn-primary py-4 px-lg-5 d-none d-lg-block"
+        >
+          Начать
           <i className="fa fa-arrow-right ms-3"></i>
-        </a>
+        </Link>
       </div>
     </nav>
   );

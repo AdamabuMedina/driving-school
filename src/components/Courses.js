@@ -1,8 +1,4 @@
-import courses1 from "../img/courses-1.jpg";
-import courses2 from "../img/courses-2.jpg";
-import courses3 from "../img/courses-3.jpg";
-
-const Courses = () => {
+const Courses = ({ courses1, courses2, courses3 }) => {
   return (
     <div className="container-xxl courses my-6 py-6 pb-0">
       <div className="container">

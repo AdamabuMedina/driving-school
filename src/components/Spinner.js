@@ -6,7 +6,7 @@ const Spinner = () => {
   useEffect(() => {
     const spinnerTimeout = setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 200);
 
     return () => clearTimeout(spinnerTimeout);
   }, []);

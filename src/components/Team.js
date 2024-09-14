@@ -1,9 +1,4 @@
-import team1 from "../img/team-1.jpg";
-import team2 from "../img/team-2.jpg";
-import team3 from "../img/team-3.jpg";
-import team4 from "../img/team-4.jpg";
-
-const Team = () => {
+const Team = ({ team1, team2, team3, team4 }) => {
   return (
     <div className="container-xxl py-6">
       <div className="container">

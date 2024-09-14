@@ -9,14 +9,17 @@ const Footer = () => {
           <div className="col-lg-3 col-md-6">
             <h4 className="text-white mb-4">Свяжитесь с нами</h4>
             <h2 className="text-primary mb-4">
-              <i className="fa fa-car text-white me-2"></i>Drivin
+              <i className="fa fa-car text-white me-2"></i>Бумер
             </h2>
             <p className="mb-2">
-              <i className="fa fa-map-marker-alt me-3"></i>123 Улица, Нью-Йорк,
-              США
+              <i className="fa fa-map-marker-alt me-3"></i>г. Майкоп, ул.
+              Гагарина, д. 34
             </p>
             <p className="mb-2">
-              <i className="fa fa-phone-alt me-3"></i>+012 345 67890
+              <i className="fa fa-phone-alt me-3"></i>
+              <a className="topbar__link" href="tel:+79182214700">
+                +7 918 221-47-00
+              </a>
             </p>
             <p className="mb-2">
               <i className="fa fa-envelope me-3"></i>info@example.com
@@ -24,10 +27,10 @@ const Footer = () => {
           </div>
           <div className="col-lg-3 col-md-6">
             <h4 className="text-light mb-4">Быстрые ссылки</h4>
-            <a className="btn btn-link" href="/">
+            <a className="btn btn-link" href="/about">
               О нас
             </a>
-            <a className="btn btn-link" href="/">
+            <a className="btn btn-link" href="/contacts">
               Свяжитесь с нами
             </a>
             <a className="btn btn-link" href="/">

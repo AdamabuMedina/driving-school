@@ -1,9 +1,6 @@
 import Slider from "react-slick";
-import testimonial1 from "../img/testimonial-1.jpg";
-import testimonial2 from "../img/testimonial-2.jpg";
-import testimonial3 from "../img/testimonial-3.jpg";
 
-const Testimonial = () => {
+const Testimonial = ({ testimonial1, testimonial2, testimonial3 }) => {
   const settings = {
     autoplay: false,
     speed: 1000,

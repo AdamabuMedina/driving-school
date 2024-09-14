@@ -22,23 +22,34 @@ const Topbar = () => {
           <div className="h-100 d-inline-flex align-items-center mx-n2">
             <a
               className="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
-              href="/"
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noreferrer"
             >
               <i className="fab fa-facebook-f"></i>
             </a>
             <a
               className="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
-              href="/"
+              href="https://x.com/"
+              target="_blank"
+              rel="noreferrer"
             >
               <i className="fab fa-twitter"></i>
             </a>
             <a
               className="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
-              href="/"
+              href="https://it.linkedin.com"
+              target="_blank"
+              rel="noreferrer"
             >
               <i className="fab fa-linkedin-in"></i>
             </a>
-            <a className="btn btn-square btn-link rounded-0" href="/">
+            <a
+              className="btn btn-square btn-link rounded-0"
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <i className="fab fa-instagram"></i>
             </a>
           </div>
